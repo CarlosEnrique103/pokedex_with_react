@@ -20,15 +20,13 @@ class Pokegame extends Component {
     let hand2 = [...this.props.pokemons];
     while(hand1.length < hand2.length) {
       let randomIndex = Math.floor(Math.random() * hand2.length);
-      let value = hand2[randomIndex];
-      hand1.push(value);
-      hand2 = [...hand2.slice(0, randomIndex), ...hand2.slice(randomIndex + 1)];
+      let pokemonRandom = hand2.splice(randomIndex, 1)[0];
+      hand1.push(pokemonRandom);
     }
     let expHand1 = hand1.reduce((acc, curr) => acc + curr.base_experience, 0);
     let expHand2 = hand2.reduce((acc, curr) => acc + curr.base_experience, 0);
     return (
       <div>
-        <h1>Pokegame !</h1>
         <Pokedex pokemons={hand1} exp={expHand1} isWinner={expHand1 > expHand2}/>
         <Pokedex pokemons={hand2} exp={expHand2} isWinner={expHand2 > expHand1}/>
       </div>

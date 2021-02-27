@@ -1,5 +1,6 @@
 .Pokedex {
   text-align: center;
+  margin-top: 10px;
 }
 
 .Pokedex-cards{
@@ -8,4 +9,12 @@
   flex-wrap: wrap;
   gap: 20px;
   padding: 20px 30px;
+}
+
+.Pokedex-winner {
+  color: #05bb23;
+}
+
+.Pokedex-loser {
+  color: #f5250a;
 }
