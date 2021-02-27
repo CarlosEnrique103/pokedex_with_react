@@ -26,7 +26,7 @@ function Pokecard({ id, name, type, exp }) {
       <h1>{name}</h1>
       <img src={imgSrc} alt={name}></img>
       <div>Type: {type}</div>
-      <div>Experience: {exp}</div>
+      <div>Experience: {exp} xp</div>
     </div>
   );
 }
